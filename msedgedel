@@ -1,0 +1,12 @@
+# @echo off
+echo Removing Microsoft Edge...
+:: Stopping the Microsoft Edge service
+taskkill /F /IM msedge.exe
+taskkill /F /IM msedge.exe
+
+:: Removing Microsoft Edge folders
+rmdir /s /q "%ProgramFiles%\Microsoft\Edge"
+rmdir /s /q "%LocalAppData%\Microsoft\Edge"
+rmdir /s /q "%AppData%\Microsoft\Edge"
+
+echo Removal completed.
